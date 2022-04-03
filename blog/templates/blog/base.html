@@ -17,6 +17,11 @@
             <a href="{% url 'post_new' %}" class="top-menu">
                 {% include 'icons/White Plus.svg' %}
             </a>
+            <h1><p class="top-menu">Hello, {{ user.username }} (<a href="{% url 'logout' %}">Log Out</a>)</p></h1>
+            {% else %}
+            <a href="{% url 'login' %}" class="top-menu">
+                {% include 'icons/403019_avatar_male_man_person_user_icon.svg' %}
+            </a>
             {% endif %}
             <h1><a href="/">Our College Project</a></h1>
         </div>
